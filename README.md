@@ -3,7 +3,7 @@ Demo project containing boilerplate code to run cucumber integration tests havin
 
 > To run integration tests execute in terminal: `mvn clean verify -PrunIntegrationTests`
 
-Output will be generated in the `results` folder.
+Output will be generated in the `results` folder
 
 # Architecture
 - Spring Boot
