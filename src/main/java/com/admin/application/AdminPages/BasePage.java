@@ -1,5 +1,4 @@
 package com.admin.application.AdminPages;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,14 +6,13 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 
 import javax.annotation.PostConstruct;
 
 @Configuration
-public class BasePage {
+public class BasePage{
 
     @Value("${username1}")
     private String userId;
@@ -28,6 +26,7 @@ public class BasePage {
     @PostConstruct
     public void initLoginPage(){
         PageFactory.initElements(driver, this);
+
     }
 
     @FindBy(how = How.NAME, using = "username")
@@ -51,33 +50,33 @@ public class BasePage {
     @FindBy(how = How.XPATH, using = "(//div[.='Add person'])[1]")
     private WebElement applicationAddPerson;
 
-    public WebElement getUsername() {
+    public void getUsername() {
         username.sendKeys(userId);
-        return username;
+//        return username;
     }
 
-    public WebElement getPassword() {
+    public void getPassword() {
         password.sendKeys(pwd);
-        return password;
+//        return password;
     }
 
-    public WebElement clickButton(){
+    public void clickButton(){
         loginButton.click();
-        return loginButton;
+//        return loginButton;
     }
 
-    public WebElement getAssignedToMeButton(){
+    public void getAssignedToMeButton(){
         assignedToMeButton.click();
-        return assignedToMeButton;
+//        return assignedToMeButton;
     }
     public WebElement getMyApplicationPage(){
         myApplicationPage.click();
         return myApplicationPage;
     }
 
-    public WebElement getAddPersonTab(){
+    public void getAddPersonTab(){
         addPersonTab.click();
-        return addPersonTab;
+//        return addPersonTab;
     }
 
     public String getApplicationAddPerson(){
