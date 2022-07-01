@@ -52,22 +52,18 @@ public class BasePage{
 
     public void getUsername() {
         username.sendKeys(userId);
-//        return username;
     }
 
     public void getPassword() {
         password.sendKeys(pwd);
-//        return password;
     }
 
     public void clickButton(){
         loginButton.click();
-//        return loginButton;
     }
 
     public void getAssignedToMeButton(){
         assignedToMeButton.click();
-//        return assignedToMeButton;
     }
     public WebElement getMyApplicationPage(){
         myApplicationPage.click();
@@ -76,7 +72,6 @@ public class BasePage{
 
     public void getAddPersonTab(){
         addPersonTab.click();
-//        return addPersonTab;
     }
 
     public String getApplicationAddPerson(){
